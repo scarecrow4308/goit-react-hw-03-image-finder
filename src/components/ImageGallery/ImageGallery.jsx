@@ -1,7 +1,7 @@
-import { Loader } from "../Loader/Loader";
-import { ImageGalleryStyled } from "./ImageGallery.styled";
-import { ImageGalleryItem } from "./ImageGalleryItem/ImageGalleryItem";
-import PropTypes from "prop-types";
+import { Loader } from '../Loader/Loader';
+import { ImageGalleryStyled } from './ImageGallery.styled';
+import { ImageGalleryItem } from './ImageGalleryItem/ImageGalleryItem';
+import PropTypes from 'prop-types';
 
 export const ImageGallery = ({
   images,
@@ -13,7 +13,6 @@ export const ImageGallery = ({
     const element = images.map(({ id, tags, largeImageURL }) => (
       <ImageGalleryItem
         key={id}
-        loading={loading}
         tags={tags}
         setImagePath={setImagePath}
         setModalIsOpen={setModalIsOpen}

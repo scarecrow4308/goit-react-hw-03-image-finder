@@ -1,13 +1,12 @@
-import { Loader } from "../../Loader/Loader";
+import { Loader } from '../../Loader/Loader';
 import {
   ImageGalleryItemStyled,
   ImageGalleryItemImage,
-} from "./ImageGalleryItem.styled";
-import PropTypes from "prop-types";
+} from './ImageGalleryItem.styled';
+import PropTypes from 'prop-types';
 
 export const ImageGalleryItem = ({
   tags,
-  loading,
   largeImageURL,
   setModalIsOpen,
   setImagePath,
@@ -16,10 +15,6 @@ export const ImageGalleryItem = ({
     setModalIsOpen(true);
     setImagePath(largeImageURL);
   };
-
-  if (loading) {
-    return <Loader />;
-  }
 
   return (
     <ImageGalleryItemStyled onClick={() => onClick(largeImageURL)}>
